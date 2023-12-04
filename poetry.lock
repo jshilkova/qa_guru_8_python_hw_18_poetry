@@ -406,13 +406,13 @@ files = [
 
 [[package]]
 name = "pytest"
-version = "7.3.0"
+version = "7.4.3"
 description = "pytest: simple powerful testing with Python"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "pytest-7.3.0-py3-none-any.whl", hash = "sha256:933051fa1bfbd38a21e73c3960cebdad4cf59483ddba7696c48509727e17f201"},
-    {file = "pytest-7.3.0.tar.gz", hash = "sha256:58ecc27ebf0ea643ebfdf7fb1249335da761a00c9f955bcd922349bcb68ee57d"},
+    {file = "pytest-7.4.3-py3-none-any.whl", hash = "sha256:0d009c083ea859a71b76adf7c1d502e4bc170b80a8ef002da5806527b9591fac"},
+    {file = "pytest-7.4.3.tar.gz", hash = "sha256:d989d136982de4e3b29dabcc838ad581c64e8ed52c11fbe86ddebd9da0818cd5"},
 ]
 
 [package.dependencies]
@@ -422,7 +422,7 @@ packaging = "*"
 pluggy = ">=0.12,<2.0"
 
 [package.extras]
-testing = ["argcomplete", "attrs (>=19.2.0)", "hypothesis (>=3.56)", "mock", "nose", "pygments (>=2.7.2)", "requests", "xmlschema"]
+testing = ["argcomplete", "attrs (>=19.2.0)", "hypothesis (>=3.56)", "mock", "nose", "pygments (>=2.7.2)", "requests", "setuptools", "xmlschema"]
 
 [[package]]
 name = "python-dotenv"
@@ -461,20 +461,20 @@ use-chardet-on-py3 = ["chardet (>=3.0.2,<6)"]
 
 [[package]]
 name = "selene"
-version = "2.0.0rc2"
+version = "2.0.0rc4"
 description = "User-oriented browser tests in Python (Selenide port)"
 optional = false
 python-versions = ">=3.7,<4.0"
 files = [
-    {file = "selene-2.0.0rc2-py3-none-any.whl", hash = "sha256:5258550de2a1cbbcadf5feb19bab5b084a4cb1affa551f149b6077499f0d15a6"},
-    {file = "selene-2.0.0rc2.tar.gz", hash = "sha256:d4ae8f2ac136834f04bf12d93c10c0da16feafea1d4247c8a9526b279ff860b5"},
+    {file = "selene-2.0.0rc4-py3-none-any.whl", hash = "sha256:50b007df6629a1a25e8336eaef5d275a416b6ac9adce666acfe30ae7b0bede9c"},
+    {file = "selene-2.0.0rc4.tar.gz", hash = "sha256:863b3adda4c2d23cc817e80d79ee7a625ba8ca4786f72f55a1d6236d4c66e25b"},
 ]
 
 [package.dependencies]
 future = "*"
 selenium = ">=4.4.3"
-typing-extensions = "4.3.0"
-webdriver-manager = ">=3.8.5"
+typing-extensions = ">=4.6.1"
+webdriver-manager = "3.8.6"
 
 [[package]]
 name = "selenium"
@@ -527,6 +527,26 @@ files = [
 ]
 
 [[package]]
+name = "tqdm"
+version = "4.66.1"
+description = "Fast, Extensible Progress Meter"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "tqdm-4.66.1-py3-none-any.whl", hash = "sha256:d302b3c5b53d47bce91fea46679d9c3c6508cf6332229aa1e7d8653723793386"},
+    {file = "tqdm-4.66.1.tar.gz", hash = "sha256:d88e651f9db8d8551a62556d3cff9e3034274ca5d66e93197cf2490e2dcb69c7"},
+]
+
+[package.dependencies]
+colorama = {version = "*", markers = "platform_system == \"Windows\""}
+
+[package.extras]
+dev = ["pytest (>=6)", "pytest-cov", "pytest-timeout", "pytest-xdist"]
+notebook = ["ipywidgets (>=6)"]
+slack = ["slack-sdk"]
+telegram = ["requests"]
+
+[[package]]
 name = "trio"
 version = "0.23.1"
 description = "A friendly Python library for async concurrency and I/O"
@@ -562,13 +582,13 @@ wsproto = ">=0.14"
 
 [[package]]
 name = "typing-extensions"
-version = "4.3.0"
-description = "Backported and Experimental Type Hints for Python 3.7+"
+version = "4.8.0"
+description = "Backported and Experimental Type Hints for Python 3.8+"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.8"
 files = [
-    {file = "typing_extensions-4.3.0-py3-none-any.whl", hash = "sha256:25642c956049920a5aa49edcdd6ab1e06d7e5d467fc00e0506c44ac86fbfca02"},
-    {file = "typing_extensions-4.3.0.tar.gz", hash = "sha256:e6d2677a32f47fc7eb2795db1dd15c1f34eff616bcaf2cfb5e997f854fa1c4a6"},
+    {file = "typing_extensions-4.8.0-py3-none-any.whl", hash = "sha256:8f92fc8806f9a6b641eaa5318da32b44d401efaac0f6678c9bc448ba3605faa0"},
+    {file = "typing_extensions-4.8.0.tar.gz", hash = "sha256:df8e4339e9cb77357558cbdbceca33c303714cf861d1eef15e1070055ae8b7ef"},
 ]
 
 [[package]]
@@ -592,19 +612,20 @@ zstd = ["zstandard (>=0.18.0)"]
 
 [[package]]
 name = "webdriver-manager"
-version = "4.0.1"
+version = "3.8.6"
 description = "Library provides the way to automatically manage drivers for different browsers"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "webdriver_manager-4.0.1-py2.py3-none-any.whl", hash = "sha256:d7970052295bb9cda2c1a24cf0b872dd2c41ababcc78f7b6b8dc37a41e979a7e"},
-    {file = "webdriver_manager-4.0.1.tar.gz", hash = "sha256:25ec177c6a2ce9c02fb8046f1b2732701a9418d6a977967bb065d840a3175d87"},
+    {file = "webdriver_manager-3.8.6-py2.py3-none-any.whl", hash = "sha256:7d3aa8d67bd6c92a5d25f4abd75eea2c6dd24ea6617bff986f502280903a0e2b"},
+    {file = "webdriver_manager-3.8.6.tar.gz", hash = "sha256:ee788d389b8f45222a8a62f6f39b579360a1f87be46dad6da89918354af3ce73"},
 ]
 
 [package.dependencies]
 packaging = "*"
 python-dotenv = "*"
 requests = "*"
+tqdm = "*"
 
 [[package]]
 name = "wsproto"
@@ -623,4 +644,4 @@ h11 = ">=0.9.0,<1"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "44ec3ab62a37b747ed03eb12b0e4223a193465102d10e486302e6f8c96089a03"
+content-hash = "3f5a5f00e77b8e25e5c5dd303a588d167e8ba4653a13098b8a522fef174f60c2"

@@ -1,0 +1,1 @@
+It's a project dedicated to learn how to use poetry
