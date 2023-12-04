@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "hw-18-poetry"
+version = "0.1.0"
+description = "Hw for poetry lesson"
+authors = ["Julia Shilkova <yulia.shikova@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pytest = "^7.4"
+selene = "2.0.0rc4"
+
+[tool.poetry.group.dev.dependencies]
+pylint = "3.0.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
